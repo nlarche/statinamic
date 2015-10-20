@@ -19,7 +19,21 @@ a:visited {
 }
 
 .web_modules-Layout-index--nav--1NSNT {
-  font-weight: bold;
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+.web_modules-Layout-index--separator--3CwVM {
+  opacity: .2;
+  margin: 1rem;
+}
+
+.web_modules-Layout-index--link--2Vk28 {
+  text-decoration: none;
+}
+
+.web_modules-Layout-index--icon--pk34W {
+  vertical-align: middle;
 }
 
 .web_modules-Layout-index--footer--3oPTW {
