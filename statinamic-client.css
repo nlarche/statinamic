@@ -1,14 +1,79 @@
 /* GLOBAL STYLES, OMG ! */
-a,
-a:visited {
-  color: inherit;
-  opacity: .8;
+h1,
+h2,
+h3 {
+  font-weight: 400;
 }
 
-  a:hover,
-  a:focus {
+h1,
+h2,
+h3,
+h5,
+h6 {
+  position: relative;
+}
+
+.markdownIt-Anchor {
+  position: absolute;
+  left: -1.5rem;
+  opacity: .1;
+  -webkit-transition: opacity .2s;
+          transition: opacity .2s;
+}
+
+  h1:hover .markdownIt-Anchor,
+  h2:hover .markdownIt-Anchor,
+  h3:hover .markdownIt-Anchor,
+  h4:hover .markdownIt-Anchor,
+  h5:hover .markdownIt-Anchor,
+  h6:hover .markdownIt-Anchor {
     opacity: 1;
   }
+
+a,
+a:visited {
+  color: #7340c4;
+  text-decoration: none;
+}
+
+blockquote {
+  opacity: .6;
+  margin: 2rem 0;
+  padding-left: 1.5rem;
+  border-left: 4px solid grey;
+}
+
+pre {
+  margin: 1rem 0;
+  padding: 1rem;
+
+  font-weight: 400;
+
+  color: color(#7340c4) l(-10%));
+  border: 1px solid #DDD;
+  border-radius: 0.3em;
+  background: color(#fafafa a(.6));
+}
+
+.hljs-comment {
+  opacity: .4;
+}
+
+  .hljs-comment:hover {
+    opacity: .6;
+  }
+
+.hljs-keyword {
+  font-weight: bold;
+}
+
+.hljs-class,
+.hljs-tag,
+.hljs-keyword,
+.hljs-pseudo,
+.hljs-function {
+  color: #7340c4;
+}
 
 /***/
 
@@ -25,15 +90,25 @@ a:visited {
 
 .web_modules-Layout-index--separator--3CwVM {
   opacity: .2;
-  margin: 1rem;
+  margin: 0 .8rem;
 }
 
 .web_modules-Layout-index--link--2Vk28 {
-  text-decoration: none;
+  opacity: .8;
 }
+
+  .web_modules-Layout-index--link--2Vk28:hover,
+  .web_modules-Layout-index--link--2Vk28:focus {
+    opacity: 1;
+  }
 
 .web_modules-Layout-index--icon--pk34W {
   vertical-align: middle;
+}
+
+.web_modules-Layout-index--version--VuoOr {
+  font-size: .8rem;
+  font-weight: bold;
 }
 
 .web_modules-Layout-index--footer--3oPTW {
