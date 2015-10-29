@@ -1,3 +1,38 @@
+.web_modules-Header-index--nav--34d_e {
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+.web_modules-Header-index--separator--1rO3H {
+  opacity: .2;
+  margin: 0 .8rem;
+}
+
+.web_modules-Header-index--link--3o000 {
+  opacity: .8;
+}
+
+  .web_modules-Header-index--link--3o000:hover,
+  .web_modules-Header-index--link--3o000:focus {
+    opacity: 1;
+  }
+
+.web_modules-Header-index--icon--15YSz {
+  vertical-align: middle;
+}
+
+.web_modules-Header-index--version--2liSf {
+  font-size: .8rem;
+  font-weight: bold;
+}
+.web_modules-Footer-index--footer--3mTrO {
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+  font-size: .75rem;
+
+  color: #666;
+}
 /* GLOBAL STYLES, OMG ! */
 h1,
 h2,
@@ -81,41 +116,4 @@ pre {
   max-width: 50rem;
   margin: auto;
   font-family: system, -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.web_modules-Layout-index--nav--1NSNT {
-  font-weight: 300;
-  line-height: 2rem;
-}
-
-.web_modules-Layout-index--separator--3CwVM {
-  opacity: .2;
-  margin: 0 .8rem;
-}
-
-.web_modules-Layout-index--link--2Vk28 {
-  opacity: .8;
-}
-
-  .web_modules-Layout-index--link--2Vk28:hover,
-  .web_modules-Layout-index--link--2Vk28:focus {
-    opacity: 1;
-  }
-
-.web_modules-Layout-index--icon--pk34W {
-  vertical-align: middle;
-}
-
-.web_modules-Layout-index--version--VuoOr {
-  font-size: .8rem;
-  font-weight: bold;
-}
-
-.web_modules-Layout-index--footer--3oPTW {
-  margin-top: 2rem;
-  border-top: 1px solid #ccc;
-  padding-top: 1rem;
-  font-size: .75rem;
-
-  color: #666;
 }
