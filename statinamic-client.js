@@ -30027,7 +30027,7 @@
 
 	module.exports = {
 		"name": "statinamic",
-		"version": "0.2.0",
+		"version": "0.3.0",
 		"description": "A static website generator to create dynamic website using React components.",
 		"keywords": [
 			"react",
@@ -30068,6 +30068,7 @@
 			"nano-logger": "^1.0.0",
 			"opn": "^3.0.2",
 			"rimraf": "^2.4.2",
+			"rss": "^1.2.0",
 			"webpack": "^1.11.0",
 			"webpack-dev-middleware": "^1.2.0",
 			"webpack-error-notification": "^0.1.4",
@@ -30077,8 +30078,10 @@
 		"devDependencies": {
 			"babel": "^5.8.23",
 			"babel-eslint": "^4.0.6",
+			"babel-tape-runner": "^1.2.0",
 			"eslint": "^1.7.2",
-			"eslint-plugin-react": "^3.6.2"
+			"eslint-plugin-react": "^3.6.2",
+			"tape": "^4.2.2"
 		},
 		"peerDependencies": {
 			"autoprefixer": "^6.0.2",
@@ -30120,7 +30123,8 @@
 			"babelify": "babel --copy-files src --out-dir lib",
 			"prepublish": "npm run babelify",
 			"lint": "eslint --fix src",
-			"pretest": "npm run lint",
+			"tape": "babel-tape-runner src/**/__tests__/*.js",
+			"pretest": "npm run lint && npm run tape",
 			"test": "cd demo && npm install && npm test"
 		},
 		"babel": {
@@ -30971,9 +30975,10 @@
 		"./docs/index.md": 355,
 		"./docs/setup.md": 356,
 		"./docs/usage/collections.md": 357,
-		"./docs/usage/gh-pages.md": 358,
-		"./docs/usage/index.md": 359,
-		"./index.md": 360
+		"./docs/usage/feeds.md": 358,
+		"./docs/usage/gh-pages.md": 359,
+		"./docs/usage/index.md": 360,
+		"./index.md": 361
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -31029,16 +31034,22 @@
 /* 358 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/gh-pages/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/feeds/index.json"
 
 /***/ },
 /* 359 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/gh-pages/index.json"
 
 /***/ },
 /* 360 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "docs/usage/index.json"
+
+/***/ },
+/* 361 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "index.json"
