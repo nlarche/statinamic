@@ -29548,7 +29548,7 @@
 
 	module.exports = {
 		"name": "statinamic",
-		"version": "0.4.1",
+		"version": "0.4.2",
 		"description": "A static website generator to create dynamic website using React components.",
 		"keywords": [
 			"react",
