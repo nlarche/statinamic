@@ -69,7 +69,7 @@
 
 	var _appStore2 = _interopRequireDefault(_appStore);
 
-	__webpack_require__(340);
+	__webpack_require__(341);
 
 	(0, _statinamicLibClient2["default"])({
 	  metadata: {
@@ -29548,7 +29548,7 @@
 
 	module.exports = {
 		"name": "statinamic",
-		"version": "0.4.2",
+		"version": "0.4.3",
 		"description": "A static website generator to create dynamic website using React components.",
 		"keywords": [
 			"react",
@@ -30085,7 +30085,11 @@
 
 	var statinamicReducers = _interopRequireWildcard(_statinamicLibReduxModules);
 
-	var _appPageComponents = __webpack_require__(336);
+	var _statinamicLibMdCollectionLoaderMinify = __webpack_require__(336);
+
+	var _statinamicLibMdCollectionLoaderMinify2 = _interopRequireDefault(_statinamicLibMdCollectionLoaderMinify);
+
+	var _appPageComponents = __webpack_require__(337);
 
 	var pageComponents = _interopRequireWildcard(_appPageComponents);
 
@@ -30093,11 +30097,12 @@
 
 	// initialState
 	_extends({}, typeof window !== "undefined" && window.__INITIAL_STATE__, (true) && {
-	  collection: __webpack_require__(339)["default"]
+	  collection: (0, _statinamicLibMdCollectionLoaderMinify2["default"])(__webpack_require__(340))
 	}, {
 
 	  pageComponents: pageComponents
 	}));
+
 	exports["default"] = store;
 	module.exports = exports["default"];
 
@@ -30295,6 +30300,29 @@
 
 /***/ },
 /* 336 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+	exports["default"] = function (collection) {
+	  return collection.map(function (item) {
+	    return _extends({}, item.head, {
+	      __filename: item.__filename,
+	      __url: item.__url
+	    });
+	  });
+	};
+
+	module.exports = exports["default"];
+
+/***/ },
+/* 337 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// see web_modules folder for references
@@ -30308,7 +30336,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-	var _Page2 = __webpack_require__(337);
+	var _Page2 = __webpack_require__(338);
 
 	var _Page3 = _interopRequireDefault(_Page2);
 
@@ -30316,7 +30344,7 @@
 
 	// additional layouts
 
-	var _PageError2 = __webpack_require__(338);
+	var _PageError2 = __webpack_require__(339);
 
 	var _PageError3 = _interopRequireDefault(_PageError2);
 
@@ -30325,7 +30353,7 @@
 	// export Post from "Post"
 
 /***/ },
-/* 337 */
+/* 338 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -30426,7 +30454,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 338 */
+/* 339 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -30496,7 +30524,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 339 */
+/* 340 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30509,21 +30537,21 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 340 */
+/* 341 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./docs/advanced/index.md": 341,
-		"./docs/advanced/redux.md": 342,
-		"./docs/faq.md": 343,
-		"./docs/index.md": 344,
-		"./docs/setup.md": 345,
-		"./docs/usage/collections.md": 346,
-		"./docs/usage/feeds.md": 347,
-		"./docs/usage/gh-pages.md": 348,
-		"./docs/usage/index.md": 349,
-		"./docs/usage/layouts.md": 350,
-		"./index.md": 351
+		"./docs/advanced/index.md": 342,
+		"./docs/advanced/redux.md": 343,
+		"./docs/faq.md": 344,
+		"./docs/index.md": 345,
+		"./docs/setup.md": 346,
+		"./docs/usage/collections.md": 347,
+		"./docs/usage/feeds.md": 348,
+		"./docs/usage/gh-pages.md": 349,
+		"./docs/usage/index.md": 350,
+		"./docs/usage/layouts.md": 351,
+		"./index.md": 352
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -30536,71 +30564,71 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 340;
+	webpackContext.id = 341;
 
-
-/***/ },
-/* 341 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "docs/advanced/index.json"
 
 /***/ },
 /* 342 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/advanced/redux/index.json"
+	module.exports = __webpack_require__.p + "docs/advanced/index.json"
 
 /***/ },
 /* 343 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/faq/index.json"
+	module.exports = __webpack_require__.p + "docs/advanced/redux/index.json"
 
 /***/ },
 /* 344 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/index.json"
+	module.exports = __webpack_require__.p + "docs/faq/index.json"
 
 /***/ },
 /* 345 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/setup/index.json"
+	module.exports = __webpack_require__.p + "docs/index.json"
 
 /***/ },
 /* 346 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/collections/index.json"
+	module.exports = __webpack_require__.p + "docs/setup/index.json"
 
 /***/ },
 /* 347 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/feeds/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/collections/index.json"
 
 /***/ },
 /* 348 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/gh-pages/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/feeds/index.json"
 
 /***/ },
 /* 349 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/gh-pages/index.json"
 
 /***/ },
 /* 350 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/layouts/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/index.json"
 
 /***/ },
 /* 351 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "docs/usage/layouts/index.json"
+
+/***/ },
+/* 352 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "index.json"
