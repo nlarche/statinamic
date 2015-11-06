@@ -29496,7 +29496,7 @@
 	          "a",
 	          {
 	            className: _indexCss2["default"].link,
-	            href: "https://twitter.com/MoOx"
+	            href: "https://twitter.com/Statinamic"
 	          },
 	          "Twitter"
 	        ),
@@ -29548,7 +29548,7 @@
 
 	module.exports = {
 		"name": "statinamic",
-		"version": "0.4.3",
+		"version": "0.5.0",
 		"description": "A static website generator to create dynamic website using React components.",
 		"keywords": [
 			"react",
