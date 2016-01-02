@@ -29160,10 +29160,6 @@
 
 	var _logoStatinamicTextSvg2 = _interopRequireDefault(_logoStatinamicTextSvg);
 
-	var supportUrl = "https://discord.gg/0ZcbPKXt5bW1pAiw";
-	var supportBadge = "https://img.shields.io/badge/support-reactiflux%23statinamic-738bd7.svg";
-	var changelogUrl = "https://github.com/MoOx/statinamic/blob/master/CHANGELOG.md";
-
 	var Header = (function (_Component) {
 	  _inherits(Header, _Component);
 
@@ -29255,12 +29251,12 @@
 	            "a",
 	            {
 	              className: _indexCss2["default"].link,
-	              href: supportUrl
+	              href: "https://gitter.im/MoOx/statinamic"
 	            },
 	            _react2["default"].createElement("img", {
 	              className: _indexCss2["default"].icon,
-	              src: supportBadge,
-	              alt: "Support on reactiflux#statinamic"
+	              src: "https://img.shields.io/badge/support-gitter%20chat-E40255.svg",
+	              alt: "Support on gitter chat"
 	            })
 	          ),
 	          separator,
@@ -29268,7 +29264,7 @@
 	            "a",
 	            {
 	              className: _indexCss2["default"].version,
-	              href: changelogUrl
+	              href: "https://github.com/MoOx/statinamic/blob/master/CHANGELOG.md"
 	            },
 	            "v" + _packageJson2["default"].version
 	          )
