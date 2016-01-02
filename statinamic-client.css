@@ -1,6 +1,12 @@
+.web_modules-Header-index--logo--1nJ3k {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+}
+
 .web_modules-Header-index--nav--34d_e {
   font-weight: 300;
-  line-height: 2rem;
+  line-height: 3rem;
 }
 
 .web_modules-Header-index--separator--1rO3H {
@@ -15,6 +21,10 @@
   .web_modules-Header-index--link--3o000:hover,
   .web_modules-Header-index--link--3o000:focus {
     opacity: 1;
+  }
+
+  .web_modules-Header-index--linkActive--X7LWE {
+    font-weight: 500;
   }
 
 .web_modules-Header-index--icon--15YSz {
