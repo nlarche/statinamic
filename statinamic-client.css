@@ -1,11 +1,18 @@
 .web_modules-Header-index--logo--1nJ3k {
   display: block;
 
-  max-width: 40%;
+  max-width: 320px;
+  max-width: 20rem;
   margin: 16px auto;
   margin: 1rem auto;
   padding: 16px;
   padding: 1rem;
+}
+
+@media (min-width: 50.001em) {
+  .web_modules-Header-index--logo--1nJ3k {
+    /*max-width: 40%;*/
+  }
 }
 
 .web_modules-Header-index--nav--34d_e {
@@ -15,6 +22,9 @@
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 
   font-weight: 300;
   line-height: 48px;
@@ -24,12 +34,14 @@
 }
 
 .web_modules-Header-index--link--3o000 {
-  opacity: .8;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  text-decoration: none;
+  padding: 0 11.2px;
+  padding: 0 .7rem;
   text-align: center;
+  text-decoration: none;
+  opacity: .8;
 }
 
   .web_modules-Header-index--link--3o000:hover,
@@ -48,8 +60,18 @@
     text-align: right;
   }
 
-.web_modules-Header-index--icon--15YSz {
-  vertical-align: middle;
+.web_modules-Header-index--separator--1rO3H {
+  -webkit-flex-grow: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  text-align: center;
+  opacity: .4;
+}
+
+@media (max-width: 49.999em) {
+  .web_modules-Header-index--separator--1rO3H {
+    display: none;
+  }
 }
 
 .web_modules-Header-index--version--2liSf {
@@ -58,15 +80,10 @@
   font-weight: bold;
 }
 .web_modules-Footer-index--footer--3mTrO {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-
   margin-top: 32px;
   margin-top: 2rem;
+  padding: 16px;
+  padding: 1rem;
   border-top: 1px solid #ccc;
   padding-top: 16px;
   padding-top: 1rem;
@@ -75,6 +92,10 @@
 
   color: #666;
 }
+
+  .web_modules-Footer-index--footer--3mTrO span {
+    display: inline;
+  }
 /* https://github.com/facebook/css-layout#default-values */
 div,
 span {
@@ -110,12 +131,9 @@ html {
 
 body {
   margin: 0;
+  padding: 0 16px;
+  padding: 0 1rem;
   min-height: 100%;
-
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 32px;
-  line-height: 2rem;
 
   /* system font https://medium.com/designing-medium/system-shock-6b1dc6d6596f */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -130,11 +148,14 @@ body {
     url("https://farm7.staticflickr.com/6017/5963681346_0d620eff9a_z.jpg") 50% 50% / cover no-repeat fixed;
 }
 
-.web_modules-Layout-index--page--2SuRO {
-
+@media (min-width: 50.001em) {
+  body {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
 }
 
-.web_modules-Layout-index--content--107Ft {
+.web_modules-Layout-index--layout--37zeJ {
   max-width: 960px;
   max-width: 60rem;
   margin: auto;
@@ -211,6 +232,7 @@ pre {
   background: rgba(250, 250, 250, 0.6);
 
   overflow: auto;
+  max-width: calc(100vw - 4rem);
 }
 
 code {
