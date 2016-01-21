@@ -25668,7 +25668,6 @@
 		"github": "MoOx",
 		"repository": "https://github.com/MoOx/statinamic.git",
 		"devDependencies": {
-			"autoprefixer": "^6.0.2",
 			"babel-cli": "^6.3.17",
 			"babel-core": "^6.3.26",
 			"babel-eslint": "^4.1.6",
@@ -29106,11 +29105,10 @@
 			"eslint-plugin-react": "^3.6.2",
 			"expect": "^1.13.4",
 			"expect-jsx": "^2.2.1",
-			"github-release-from-changelog": "^1.1.1",
 			"js-beautify": "^1.5.10",
 			"lnfs-cli": "^1.0.1",
 			"markdown-it": "^5.0.0",
-			"npmpub": "^2.0.0",
+			"npmpub": "^3.0.0",
 			"nyc": "^5.2.0",
 			"react": "^0.14.0",
 			"react-addons-test-utils": "^0.14.1",
@@ -29121,7 +29119,6 @@
 			"redux": "^2.0.0"
 		},
 		"peerDependencies": {
-			"autoprefixer": "^6.0.2",
 			"babel-cli": "^6.3.17",
 			"babel-core": "^6.3.26",
 			"babel-eslint": "^4.1.6",
@@ -29143,8 +29140,7 @@
 			"json-loader": "^0.5.2",
 			"markdown-it": "^5.0.0",
 			"markdown-it-toc-and-anchor": "^1.0.1",
-			"postcss-custom-media": "^5.0.0",
-			"postcss-custom-properties": "^5.0.0",
+			"postcss-cssnext": "^2.4.0",
 			"postcss-loader": "^0.7.0",
 			"react": "^0.14.0",
 			"react-dom": "^0.14.0",
@@ -29169,7 +29165,7 @@
 			"test": "npm run tests && npm run docs",
 			"test-with-coverage": "nyc npm run tests && npm run docs",
 			"coverage": "nyc report --reporter=text-lcov | coveralls",
-			"release": "npmpublish && github-release-from-changelog"
+			"release": "npmpub"
 		},
 		"config": {
 			"nyc": {
@@ -29999,8 +29995,9 @@
 		"./docs/usage/gh-pages.md": 353,
 		"./docs/usage/index.md": 354,
 		"./docs/usage/layouts.md": 355,
-		"./docs/usage/write.md": 356,
-		"./index.md": 357
+		"./docs/usage/styling.md": 356,
+		"./docs/usage/write.md": 357,
+		"./index.md": 358
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -30098,10 +30095,16 @@
 /* 356 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/write/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/styling/index.json"
 
 /***/ },
 /* 357 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "docs/usage/write/index.json"
+
+/***/ },
+/* 358 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "index.json"
