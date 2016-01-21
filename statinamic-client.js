@@ -25680,7 +25680,7 @@
 			"classnames": "^2.2.3",
 			"css-loader": "^0.17.0",
 			"eslint": "^1.7.2",
-			"eslint-config-i-am-meticulous": "^1.0.0",
+			"eslint-config-i-am-meticulous": "^2.0.0",
 			"eslint-loader": "^1.1.0",
 			"eslint-plugin-react": "^3.6.2",
 			"extract-text-webpack-plugin": "^0.8.2",
@@ -25708,14 +25708,12 @@
 			"whatwg-fetch": "^0.9.0"
 		},
 		"scripts": {
-			"lint": "eslint --fix .",
 			"start": "babel-node scripts/build --server --open --dev",
-			"static": "babel-node scripts/build --static --production",
-			"static+start": "babel-node scripts/build --static --server --open --dev",
-			"predeploy": "npm run static",
-			"deploy": "./scripts/deploy.sh",
+			"build": "babel-node scripts/build --static --production",
+			"build+start": "babel-node scripts/build --static --server --open --dev",
+			"lint": "eslint --fix .",
 			"pretest": "npm run lint",
-			"test": "npm run static"
+			"test": "npm run build"
 		},
 		"babel": {
 			"presets": [
@@ -25732,9 +25730,8 @@
 			}
 		},
 		"eslintConfig": {
-			"root": true,
+			"parser": "babel-eslint",
 			"extends": [
-				"eslint-config-i-am-meticulous",
 				"eslint-config-i-am-meticulous/react"
 			],
 			"globals": {
@@ -29074,9 +29071,11 @@
 		},
 		"dependencies": {
 			"chalk": "^1.1.0",
+			"change-case-keys": "0.0.4",
 			"commander": "^2.9.0",
 			"connect-history-api-fallback": "^1.1.0",
 			"express": "^4.13.3",
+			"fs-promise": "^0.3.1",
 			"gray-matter": "^2.0.0",
 			"history": "^1.12.5",
 			"loader-utils": "^0.2.11",
@@ -29103,7 +29102,7 @@
 			"babel-preset-stage-1": "^6.3.13",
 			"coveralls": "^2.11.6",
 			"eslint": "^1.7.2",
-			"eslint-config-i-am-meticulous": "^1.0.0",
+			"eslint-config-i-am-meticulous": "^2.0.0",
 			"eslint-plugin-react": "^3.6.2",
 			"expect": "^1.13.4",
 			"expect-jsx": "^2.2.1",
@@ -29133,7 +29132,7 @@
 			"babel-preset-react-hmre": "^1.0.1",
 			"css-loader": "^0.17.0",
 			"eslint": "^1.7.2",
-			"eslint-config-i-am-meticulous": "^1.0.0",
+			"eslint-config-i-am-meticulous": "^2.0.0",
 			"eslint-loader": "^1.1.0",
 			"eslint-plugin-react": "^3.6.2",
 			"extract-text-webpack-plugin": "^0.8.2",
@@ -29187,9 +29186,8 @@
 			]
 		},
 		"eslintConfig": {
-			"root": true,
+			"parser": "babel-eslint",
 			"extends": [
-				"eslint-config-i-am-meticulous",
 				"eslint-config-i-am-meticulous/react"
 			],
 			"globals": {
@@ -29996,12 +29994,13 @@
 		"./docs/index.md": 348,
 		"./docs/setup.md": 349,
 		"./docs/usage/collections.md": 350,
-		"./docs/usage/feeds.md": 351,
-		"./docs/usage/gh-pages.md": 352,
-		"./docs/usage/index.md": 353,
-		"./docs/usage/layouts.md": 354,
-		"./docs/usage/write.md": 355,
-		"./index.md": 356
+		"./docs/usage/configuration.md": 351,
+		"./docs/usage/feeds.md": 352,
+		"./docs/usage/gh-pages.md": 353,
+		"./docs/usage/index.md": 354,
+		"./docs/usage/layouts.md": 355,
+		"./docs/usage/write.md": 356,
+		"./index.md": 357
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -30069,34 +30068,40 @@
 /* 351 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/feeds/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/configuration/index.json"
 
 /***/ },
 /* 352 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/gh-pages/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/feeds/index.json"
 
 /***/ },
 /* 353 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/gh-pages/index.json"
 
 /***/ },
 /* 354 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/layouts/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/index.json"
 
 /***/ },
 /* 355 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/write/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/layouts/index.json"
 
 /***/ },
 /* 356 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "docs/usage/write/index.json"
+
+/***/ },
+/* 357 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "index.json"
