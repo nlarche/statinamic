@@ -25771,16 +25771,16 @@
 
 	var _PageContainer2 = _interopRequireDefault(_PageContainer);
 
-	var _Layout = __webpack_require__(234);
+	var _LayoutContainer = __webpack_require__(234);
 
-	var _Layout2 = _interopRequireDefault(_Layout);
+	var _LayoutContainer2 = _interopRequireDefault(_LayoutContainer);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// routes
 	exports.default = _react2.default.createElement(
 	  _reactRouter.Route,
-	  { component: _Layout2.default },
+	  { component: _LayoutContainer2.default },
 	  _react2.default.createElement(_reactRouter.Route, { path: "*", component: _PageContainer2.default })
 	);
 
@@ -25812,9 +25812,9 @@
 
 	exports.default = (0, _reactRedux.connect)(function (_ref) {
 	  var pages = _ref.pages;
-	  var pageComponents = _ref.pageComponents;
+	  var layouts = _ref.layouts;
 
-	  return { pages: pages, pageComponents: pageComponents };
+	  return { pages: pages, layouts: layouts };
 	}, function (dispatch) {
 	  return {
 	    getPage: function getPage(page) {
@@ -26276,8 +26276,8 @@
 	  }, {
 	    key: "preparePage",
 	    value: function preparePage(props) {
-	      if (!props.pageComponents[props.defaultComponent]) {
-	        console.error("statinamic: PageContainer: " + ("default component \"" + props.defaultComponent + "\" doesn't exist. ") + "Please check your configuration (\"pageComponents\" part). " + ("If you haven't defined \"" + props.defaultComponent + "\", you should. "));
+	      if (!props.layouts[props.defaultLayout]) {
+	        console.error("statinamic: PageContainer: " + ("default layout \"" + props.defaultLayout + "\" doesn't exist. ") + "Please check your configuration (\"layouts\" part). " + ("If you haven't defined \"" + props.defaultLayout + "\", you should. "));
 	      }
 
 	      var pageKey = splatToUri(props.params.splat);
@@ -26292,16 +26292,16 @@
 	          return;
 	        }
 
-	        var PageComponent = this.getPageComponent(props, page);
-	        if (page.type !== undefined && !PageComponent) {
-	          console.error("statinamic: PageContainer: " + ("Unkown page type: \"" + page.type + "\" component not available in ") + "\"pageComponents\" property. " + ("Please check the \"layout\" or \"type\" of page \"" + page + "\" header."));
+	        var Layout = this.getLayout(props, page);
+	        if (page.type !== undefined && !Layout) {
+	          console.error("statinamic: PageContainer: " + ("Unkown page type: \"" + page.type + "\" component not available in ") + "\"layouts\" property. " + ("Please check the \"layout\" or \"type\" of page \"" + page + "\" header."));
 	        }
 	      }
 	    }
 	  }, {
-	    key: "getPageComponent",
-	    value: function getPageComponent(props, page) {
-	      return props.pageComponents[page.type || props.defaultComponent];
+	    key: "getLayout",
+	    value: function getLayout(props, page) {
+	      return props.layouts[page.type || props.defaultLayout];
 	    }
 	  }, {
 	    key: "render",
@@ -26320,9 +26320,9 @@
 	        return null;
 	      }
 
-	      var PageLoading = this.props.pageComponents.PageLoading;
-	      var PageError = this.props.pageComponents.PageError;
-	      var PageComponent = this.getPageComponent(this.props, page);
+	      var PageLoading = this.props.layouts.PageLoading;
+	      var PageError = this.props.layouts.PageError;
+	      var Layout = this.getLayout(this.props, page);
 
 	      return _react2.default.createElement(
 	        "div",
@@ -26343,7 +26343,7 @@
 	          )
 	        ),
 	        !!page.error && PageError && _react2.default.createElement(PageError, page),
-	        !page.error && !page.loading && PageComponent && _react2.default.createElement(PageComponent, page)
+	        !page.error && !page.loading && Layout && _react2.default.createElement(Layout, page)
 	      );
 	    }
 	  }]);
@@ -26354,16 +26354,16 @@
 	PageContainer.propTypes = {
 
 	  pages: _react.PropTypes.object.isRequired,
-	  pageComponents: _react.PropTypes.object.isRequired,
+	  layouts: _react.PropTypes.object.isRequired,
 	  params: _react.PropTypes.object,
 
-	  defaultComponent: _react.PropTypes.string,
+	  defaultLayout: _react.PropTypes.string,
 
 	  // actions
 	  getPage: _react.PropTypes.func.isRequired
 	};
 	PageContainer.defaultProps = {
-	  defaultComponent: "Page"
+	  defaultLayout: "Page"
 	};
 	exports.default = PageContainer;
 
@@ -29516,7 +29516,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"layout":"web_modules-Layout-index--layout--37zeJ"};
+	module.exports = {"layout":"web_modules-LayoutContainer-index--layout--2Dus4"};
 
 /***/ },
 /* 328 */,
@@ -29545,9 +29545,9 @@
 
 	var _minify2 = _interopRequireDefault(_minify);
 
-	var _pageComponents = __webpack_require__(336);
+	var _layouts = __webpack_require__(336);
 
-	var pageComponents = _interopRequireWildcard(_pageComponents);
+	var layouts = _interopRequireWildcard(_layouts);
 
 	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -29560,7 +29560,7 @@
 	  collection: (0, _minify2.default)(__webpack_require__(341))
 	}, {
 
-	  pageComponents: pageComponents
+	  layouts: layouts
 	}));
 
 	exports.default = store;
@@ -29670,15 +29670,15 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	exports.pages = exports.pageComponents = exports.collection = undefined;
+	exports.pages = exports.layouts = exports.collection = undefined;
 
 	var _collection2 = __webpack_require__(333);
 
 	var _collection3 = _interopRequireDefault(_collection2);
 
-	var _pageComponents2 = __webpack_require__(334);
+	var _layouts2 = __webpack_require__(334);
 
-	var _pageComponents3 = _interopRequireDefault(_pageComponents2);
+	var _layouts3 = _interopRequireDefault(_layouts2);
 
 	var _pages2 = __webpack_require__(230);
 
@@ -29687,7 +29687,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.collection = _collection3.default;
-	exports.pageComponents = _pageComponents3.default;
+	exports.layouts = _layouts3.default;
 	exports.pages = _pages3.default;
 
 /***/ },
@@ -29728,23 +29728,23 @@
 
 	"use strict";
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 	exports.default = reducer;
-	function reducer() {
+	function reducer() /* , action */{
 	  var state = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-	  var action = arguments[1];
 
-	  switch (action.type) {
-	    case "PAGE_COMPONENTS_SET":
-	      return _extends({}, action.pageComponents);
-
-	    default:
-	      return state;
-	  }
+	  // switch (action.type) {
+	  // case "LAYOUTS_SET":
+	  //   return {
+	  //     ...action.layouts,
+	  //   }
+	  //
+	  // default:
+	  //   return state
+	  // }
+	  return state;
 	}
 
 /***/ },
@@ -29795,15 +29795,12 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	exports.Page = _Page3.default;
-
-	// additional layouts
-	// see web_modules folder for references
-
-	// default layout
+	exports.Page = _Page3.default; // default layout
 
 	exports.PageError = _PageError3.default;
-	// export Post from "Post"
+
+	// you can add your own layout here
+	// eg: export Post from "Post"
 
 /***/ },
 /* 337 */
@@ -29921,7 +29918,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"callout":"web_modules-Page-index--callout--2-cw8","calloutDanger":"web_modules-Page-index--calloutDanger--1uTFn","calloutTitle":"web_modules-Page-index--calloutTitle--R3T8M","calloutWarning":"web_modules-Page-index--calloutWarning--2PHfB","calloutInfo":"web_modules-Page-index--calloutInfo--OnpXj"};
+	module.exports = {"callout":"web_modules-layouts-Page-index--callout--1qrsZ","calloutDanger":"web_modules-layouts-Page-index--calloutDanger--3g7eR","calloutTitle":"web_modules-layouts-Page-index--calloutTitle--3kLVU","calloutWarning":"web_modules-layouts-Page-index--calloutWarning--ijKnx","calloutInfo":"web_modules-layouts-Page-index--calloutInfo--3UT-q"};
 
 /***/ },
 /* 339 */,
