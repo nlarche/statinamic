@@ -25690,8 +25690,10 @@
 			"json-loader": "^0.5.2",
 			"markdown-it": "^5.0.0",
 			"markdown-it-toc-and-anchor": "^1.0.1",
-			"postcss-cssnext": "^2.3.0",
+			"postcss-browser-reporter": "^0.4.0",
+			"postcss-cssnext": "^2.4.0",
 			"postcss-loader": "^0.7.0",
+			"postcss-reporter": "^1.3.0",
 			"react": "^0.14.0",
 			"react-dom": "^0.14.0",
 			"react-google-analytics": "^0.2.0",
@@ -25703,6 +25705,8 @@
 			"redux-devtools": "^2.1.0",
 			"redux-thunk": "^0.1.0",
 			"style-loader": "^0.12.3",
+			"stylelint": "^4.0.0",
+			"stylelint-config-standard": "^1.0.0",
 			"webpack": "^1.12.1",
 			"whatwg-fetch": "^0.9.0"
 		},
@@ -25710,7 +25714,9 @@
 			"start": "babel-node scripts/build --server --open --dev",
 			"build": "babel-node scripts/build --static --production",
 			"build+start": "babel-node scripts/build --static --server --open --dev",
-			"lint": "eslint --fix .",
+			"lint:js": "eslint --fix .",
+			"lint:css": "stylelint 'web_modules/**/*.css'",
+			"lint": "npm run lint:js && npm run lint:css",
 			"pretest": "npm run lint",
 			"test": "npm run build"
 		},
@@ -25739,6 +25745,9 @@
 				"__PROD__": true,
 				"__DEVTOOLS__": true
 			}
+		},
+		"stylelint": {
+			"extends": "stylelint-config-standard"
 		}
 	};
 
@@ -29026,7 +29035,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"logo":"web_modules-Header-index--logo--1nJ3k","nav":"web_modules-Header-index--nav--34d_e","link":"web_modules-Header-index--link--3o000","linkActive":"web_modules-Header-index--linkActive--X7LWE","separator":"web_modules-Header-index--separator--1rO3H","version":"web_modules-Header-index--version--2liSf"};
+	module.exports = {"nav":"web_modules-Header-index--nav--34d_e","link":"web_modules-Header-index--link--3o000","linkActive":"web_modules-Header-index--linkActive--X7LWE","separator":"web_modules-Header-index--separator--1rO3H","version":"web_modules-Header-index--version--2liSf"};
 
 /***/ },
 /* 317 */,
@@ -29116,7 +29125,9 @@
 			"react-helmet": "^2.1.0",
 			"react-redux": "^2.1.0",
 			"react-router": "^1.0.0-rc3",
-			"redux": "^2.0.0"
+			"redux": "^2.0.0",
+			"stylelint": "^4.0.0",
+			"stylelint-config-standard": "^1.0.0"
 		},
 		"peerDependencies": {
 			"babel-cli": "^6.3.17",
@@ -29140,17 +29151,22 @@
 			"json-loader": "^0.5.2",
 			"markdown-it": "^5.0.0",
 			"markdown-it-toc-and-anchor": "^1.0.1",
+			"postcss-browser-reporter": "^0.4.0",
 			"postcss-cssnext": "^2.4.0",
 			"postcss-loader": "^0.7.0",
+			"postcss-reporter": "^1.3.0",
 			"react": "^0.14.0",
 			"react-dom": "^0.14.0",
 			"react-helmet": "^2.1.0",
 			"react-redux": "^2.1.0",
 			"react-router": "^1.0.0-rc3",
+			"react-svg-loader": "0.0.6",
 			"redux": "^2.0.0",
 			"redux-devtools": "^2.1.0",
 			"redux-thunk": "^0.1.0",
 			"style-loader": "^0.12.3",
+			"stylelint": "^4.0.0",
+			"stylelint-config-standard": "^1.0.0",
 			"webpack": "^1.12.1",
 			"whatwg-fetch": "^0.9.0"
 		},
@@ -29158,8 +29174,11 @@
 			"prebabelify": "rimraf lib",
 			"babelify": "babel --ignore __tests__ --copy-files src --out-dir lib",
 			"prepublish": "npm run babelify",
-			"docs": "lnfs src docs/node_modules/statinamic/lib && lnfs package.json docs/node_modules/statinamic/package.json && cd docs && npm install && npm test",
-			"lint": "eslint --fix .",
+			"predocs": "lnfs src docs/node_modules/statinamic/lib && lnfs package.json docs/node_modules/statinamic/package.json",
+			"docs": "cd docs && npm install && npm test",
+			"lint:js": "eslint --fix .",
+			"lint:css": "stylelint '**/web_modules/**/*.css'",
+			"lint": "npm run lint:js && npm run lint:css",
 			"tests": "ava --verbose '**/__tests__/*.js'",
 			"pretest": "npm run lint",
 			"test": "npm run tests && npm run docs",
@@ -29192,6 +29211,9 @@
 				"__PROD__": true,
 				"__DEVTOOLS__": true
 			}
+		},
+		"stylelint": {
+			"extends": "stylelint-config-standard"
 		}
 	};
 
@@ -29983,7 +30005,7 @@
 
 	var map = {
 		"./docs/advanced/engine.md": 343,
-		"./docs/advanced/good-practises.md": 344,
+		"./docs/advanced/good-practices.md": 344,
 		"./docs/advanced/index.md": 345,
 		"./docs/advanced/redux.md": 346,
 		"./docs/faq.md": 347,
@@ -30023,7 +30045,7 @@
 /* 344 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/advanced/good-practises/index.json"
+	module.exports = __webpack_require__.p + "docs/advanced/good-practices/index.json"
 
 /***/ },
 /* 345 */
