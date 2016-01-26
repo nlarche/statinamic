@@ -29993,6 +29993,8 @@
 	exports.default = function () {
 	  var reducer = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 	  var initialState = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+	  var extraMiddlewares = arguments.length <= 2 || arguments[2] === undefined ? {} : arguments[2];
+	  var extraStoreEnhancers = arguments.length <= 3 || arguments[3] === undefined ? {} : arguments[3];
 
 	  function promiseMiddleware() {
 	    return function (next) {
@@ -30038,9 +30040,9 @@
 	      return matches && matches.length > 0 ? matches[1] : null;
 	    };
 
-	    finalCreateStore = (0, _redux.compose)((0, _redux.applyMiddleware)(promiseMiddleware, _reduxThunk2.default), devTools(), persistState(getDebugSessionKey()))(_redux.createStore);
+	    finalCreateStore = _redux.compose.apply(undefined, [_redux.applyMiddleware.apply(undefined, [promiseMiddleware, _reduxThunk2.default].concat(_toConsumableArray(extraMiddlewares))), devTools(), persistState(getDebugSessionKey())].concat(_toConsumableArray(extraStoreEnhancers)))(_redux.createStore);
 	  } else {
-	    finalCreateStore = (0, _redux.applyMiddleware)(promiseMiddleware, _reduxThunk2.default)(_redux.createStore);
+	    finalCreateStore = _redux.compose.apply(undefined, [_redux.applyMiddleware.apply(undefined, [promiseMiddleware, _reduxThunk2.default].concat(_toConsumableArray(extraMiddlewares)))].concat(_toConsumableArray(extraStoreEnhancers)))(_redux.createStore);
 	  }
 
 	  return finalCreateStore(reducer, initialState);
@@ -30053,6 +30055,8 @@
 	var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
