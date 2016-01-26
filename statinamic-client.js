@@ -25675,7 +25675,7 @@
 			"redux-thunk": "^1.0.3",
 			"style-loader": "^0.12.3",
 			"stylelint": "^4.0.0",
-			"stylelint-config-standard": "^1.0.0",
+			"stylelint-config-standard": "^2.0.0",
 			"webpack": "^1.12.1",
 			"whatwg-fetch": "^0.9.0"
 		},
@@ -26404,7 +26404,11 @@
 	          "div",
 	          { className: _index2.default.layout },
 	          _react2.default.createElement(_Header2.default, null),
-	          this.props.children,
+	          _react2.default.createElement(
+	            "div",
+	            { className: _index2.default.content },
+	            this.props.children
+	          ),
 	          _react2.default.createElement(_Footer2.default, null)
 	        )
 	      );
@@ -28853,7 +28857,7 @@
 	    value: function render() {
 	      return _react2.default.createElement(
 	        "header",
-	        null,
+	        { className: _index2.default.header },
 	        _react2.default.createElement(
 	          "div",
 	          { className: _index2.default.logo },
@@ -29004,7 +29008,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"nav":"web_modules-Header-index--nav--34d_e","link":"web_modules-Header-index--link--3o000","linkActive":"web_modules-Header-index--linkActive--X7LWE","separator":"web_modules-Header-index--separator--1rO3H","version":"web_modules-Header-index--version--2liSf"};
+	module.exports = {"header":"web_modules-Header-index--header--19Fr8","logo":"web_modules-Header-index--logo--1nJ3k","nav":"web_modules-Header-index--nav--34d_e","link":"web_modules-Header-index--link--3o000","linkActive":"web_modules-Header-index--linkActive--X7LWE","separator":"web_modules-Header-index--separator--1rO3H","version":"web_modules-Header-index--version--2liSf"};
 
 /***/ },
 /* 317 */,
@@ -29099,7 +29103,7 @@
 			"redux-devtools-dock-monitor": "^1.0.1",
 			"redux-devtools-log-monitor": "^1.0.1",
 			"stylelint": "^4.0.0",
-			"stylelint-config-standard": "^1.0.0"
+			"stylelint-config-standard": "^2.0.0"
 		},
 		"peerDependencies": {
 			"babel-cli": "^6.3.17",
@@ -29140,7 +29144,7 @@
 			"redux-thunk": "^1.0.3",
 			"style-loader": "^0.12.3",
 			"stylelint": "^4.0.0",
-			"stylelint-config-standard": "^1.0.0",
+			"stylelint-config-standard": "^2.0.0",
 			"webpack": "^1.12.1",
 			"whatwg-fetch": "^0.9.0"
 		},
@@ -29295,17 +29299,24 @@
 	      return _react2.default.createElement(
 	        "footer",
 	        { className: _index2.default.footer },
-	        "© 2015 - ",
 	        _react2.default.createElement(
 	          "a",
-	          { href: "http://moox.io/" },
-	          "@MoOx"
+	          {
+	            href: "http://moox.io/statinamic/",
+	            className: _index2.default.link
+	          },
+	          "Cooked by ",
+	          _react2.default.createElement(
+	            "span",
+	            { className: _index2.default.reference },
+	            "@MoOx"
+	          )
 	        ),
 	        " | ",
 	        _react2.default.createElement(
 	          "a",
 	          { href: "https://github.com/MoOx/statinamic" },
-	          "Check out on GitHub"
+	          "Source on GitHub"
 	        )
 	      );
 	    }
@@ -29321,7 +29332,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"footer":"web_modules-Footer-index--footer--3mTrO"};
+	module.exports = {"footer":"web_modules-Footer-index--footer--3mTrO","link":"web_modules-Footer-index--link--2kQfC","reference":"web_modules-Footer-index--reference--17USc"};
 
 /***/ },
 /* 324 */,
@@ -29490,7 +29501,7 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"layout":"web_modules-LayoutContainer-index--layout--2Dus4"};
+	module.exports = {"layout":"web_modules-LayoutContainer-index--layout--2Dus4","content":"web_modules-LayoutContainer-index--content--sKdOR"};
 
 /***/ },
 /* 328 */,
@@ -29859,7 +29870,7 @@
 	        ),
 	        head.incomplete && _react2.default.createElement(
 	          "div",
-	          { className: _index2.default.callout + " " + _index2.default.calloutInfo },
+	          { className: _index2.default.callout + " " + _index2.default.calloutWarning },
 	          _react2.default.createElement(
 	            "strong",
 	            { className: _index2.default.calloutTitle },
