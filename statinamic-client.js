@@ -60,14 +60,14 @@
 
 	var _routes2 = _interopRequireDefault(_routes);
 
-	var _store = __webpack_require__(339);
+	var _store = __webpack_require__(341);
 
 	var _store2 = _interopRequireDefault(_store);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// all md files as JSON + generate collections
-	__webpack_require__(352);
+	__webpack_require__(354);
 
 	// ---
 
@@ -26798,6 +26798,8 @@
 
 	var _index2 = _interopRequireDefault(_index);
 
+	__webpack_require__(339);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29931,6 +29933,13 @@
 /***/ },
 /* 338 */,
 /* 339 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 340 */,
+/* 341 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -29943,19 +29952,19 @@
 
 	var _redux = __webpack_require__(225);
 
-	var _createStore = __webpack_require__(340);
+	var _createStore = __webpack_require__(342);
 
 	var _createStore2 = _interopRequireDefault(_createStore);
 
-	var _modules = __webpack_require__(342);
+	var _modules = __webpack_require__(344);
 
 	var statinamicReducers = _interopRequireWildcard(_modules);
 
-	var _minify = __webpack_require__(345);
+	var _minify = __webpack_require__(347);
 
 	var _minify2 = _interopRequireDefault(_minify);
 
-	var _layouts = __webpack_require__(346);
+	var _layouts = __webpack_require__(348);
 
 	var layouts = _interopRequireWildcard(_layouts);
 
@@ -29967,7 +29976,7 @@
 
 	// initialState
 	_extends({}, typeof window !== "undefined" && window.__INITIAL_STATE__, (true) && {
-	  collection: (0, _minify2.default)(__webpack_require__(351))
+	  collection: (0, _minify2.default)(__webpack_require__(353))
 	}, {
 
 	  layouts: layouts
@@ -29976,7 +29985,7 @@
 	exports.default = store;
 
 /***/ },
-/* 340 */
+/* 342 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -30049,7 +30058,7 @@
 
 	var _redux = __webpack_require__(225);
 
-	var _reduxThunk = __webpack_require__(341);
+	var _reduxThunk = __webpack_require__(343);
 
 	var _reduxThunk2 = _interopRequireDefault(_reduxThunk);
 
@@ -30060,7 +30069,7 @@
 	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 /***/ },
-/* 341 */
+/* 343 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30079,7 +30088,7 @@
 	module.exports = thunkMiddleware;
 
 /***/ },
-/* 342 */
+/* 344 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -30089,11 +30098,11 @@
 	});
 	exports.pages = exports.layouts = exports.collection = undefined;
 
-	var _collection2 = __webpack_require__(343);
+	var _collection2 = __webpack_require__(345);
 
 	var _collection3 = _interopRequireDefault(_collection2);
 
-	var _layouts2 = __webpack_require__(344);
+	var _layouts2 = __webpack_require__(346);
 
 	var _layouts3 = _interopRequireDefault(_layouts2);
 
@@ -30108,7 +30117,7 @@
 	exports.pages = _pages3.default;
 
 /***/ },
-/* 343 */
+/* 345 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30140,7 +30149,7 @@
 	}
 
 /***/ },
-/* 344 */
+/* 346 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30165,7 +30174,7 @@
 	}
 
 /***/ },
-/* 345 */
+/* 347 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30192,7 +30201,7 @@
 	};
 
 /***/ },
-/* 346 */
+/* 348 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -30202,11 +30211,11 @@
 	});
 	exports.PageError = exports.Page = undefined;
 
-	var _Page2 = __webpack_require__(347);
+	var _Page2 = __webpack_require__(349);
 
 	var _Page3 = _interopRequireDefault(_Page2);
 
-	var _PageError2 = __webpack_require__(350);
+	var _PageError2 = __webpack_require__(352);
 
 	var _PageError3 = _interopRequireDefault(_PageError2);
 
@@ -30220,7 +30229,7 @@
 	// eg: export Post from "Post"
 
 /***/ },
-/* 347 */
+/* 349 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -30243,7 +30252,7 @@
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
-	var _index = __webpack_require__(348);
+	var _index = __webpack_require__(350);
 
 	var _index2 = _interopRequireDefault(_index);
 
@@ -30331,15 +30340,15 @@
 	exports.default = Page;
 
 /***/ },
-/* 348 */
+/* 350 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 	module.exports = {"callout":"web_modules-layouts-Page-index--callout--1qrsZ","calloutDanger":"web_modules-layouts-Page-index--calloutDanger--3g7eR","calloutTitle":"web_modules-layouts-Page-index--calloutTitle--3kLVU","calloutWarning":"web_modules-layouts-Page-index--calloutWarning--ijKnx","calloutInfo":"web_modules-layouts-Page-index--calloutInfo--3UT-q"};
 
 /***/ },
-/* 349 */,
-/* 350 */
+/* 351 */,
+/* 352 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -30405,7 +30414,7 @@
 	exports.default = PageError;
 
 /***/ },
-/* 351 */
+/* 353 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30414,26 +30423,26 @@
 	module.exports = cache;
 
 /***/ },
-/* 352 */
+/* 354 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./docs/advanced/engine.md": 353,
-		"./docs/advanced/good-practices.md": 354,
-		"./docs/advanced/index.md": 355,
-		"./docs/advanced/redux.md": 356,
-		"./docs/faq.md": 357,
-		"./docs/index.md": 358,
-		"./docs/setup.md": 359,
-		"./docs/usage/collections.md": 360,
-		"./docs/usage/configuration.md": 361,
-		"./docs/usage/feeds.md": 362,
-		"./docs/usage/gh-pages.md": 363,
-		"./docs/usage/index.md": 364,
-		"./docs/usage/layouts.md": 365,
-		"./docs/usage/styling.md": 366,
-		"./docs/usage/write.md": 367,
-		"./index.md": 368
+		"./docs/advanced/engine.md": 355,
+		"./docs/advanced/good-practices.md": 356,
+		"./docs/advanced/index.md": 357,
+		"./docs/advanced/redux.md": 358,
+		"./docs/faq.md": 359,
+		"./docs/index.md": 360,
+		"./docs/setup.md": 361,
+		"./docs/usage/collections.md": 362,
+		"./docs/usage/configuration.md": 363,
+		"./docs/usage/feeds.md": 364,
+		"./docs/usage/gh-pages.md": 365,
+		"./docs/usage/index.md": 366,
+		"./docs/usage/layouts.md": 367,
+		"./docs/usage/styling.md": 368,
+		"./docs/usage/write.md": 369,
+		"./index.md": 370
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -30446,101 +30455,101 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 352;
+	webpackContext.id = 354;
 
-
-/***/ },
-/* 353 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "docs/advanced/engine/index.json"
-
-/***/ },
-/* 354 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "docs/advanced/good-practices/index.json"
 
 /***/ },
 /* 355 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/advanced/index.json"
+	module.exports = __webpack_require__.p + "docs/advanced/engine/index.json"
 
 /***/ },
 /* 356 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/advanced/redux/index.json"
+	module.exports = __webpack_require__.p + "docs/advanced/good-practices/index.json"
 
 /***/ },
 /* 357 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/faq/index.json"
+	module.exports = __webpack_require__.p + "docs/advanced/index.json"
 
 /***/ },
 /* 358 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/index.json"
+	module.exports = __webpack_require__.p + "docs/advanced/redux/index.json"
 
 /***/ },
 /* 359 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/setup/index.json"
+	module.exports = __webpack_require__.p + "docs/faq/index.json"
 
 /***/ },
 /* 360 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/collections/index.json"
+	module.exports = __webpack_require__.p + "docs/index.json"
 
 /***/ },
 /* 361 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/configuration/index.json"
+	module.exports = __webpack_require__.p + "docs/setup/index.json"
 
 /***/ },
 /* 362 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/feeds/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/collections/index.json"
 
 /***/ },
 /* 363 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/gh-pages/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/configuration/index.json"
 
 /***/ },
 /* 364 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/feeds/index.json"
 
 /***/ },
 /* 365 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/layouts/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/gh-pages/index.json"
 
 /***/ },
 /* 366 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/styling/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/index.json"
 
 /***/ },
 /* 367 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__.p + "docs/usage/write/index.json"
+	module.exports = __webpack_require__.p + "docs/usage/layouts/index.json"
 
 /***/ },
 /* 368 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "docs/usage/styling/index.json"
+
+/***/ },
+/* 369 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "docs/usage/write/index.json"
+
+/***/ },
+/* 370 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "index.json"
