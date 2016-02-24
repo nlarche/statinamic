@@ -1,0 +1,90 @@
+/* reset from https://github.com/cssrecipes/reset/blob/master/lib/button.css */
+.web_modules-Button-index--button--1DI5I {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+/* Remove excess padding and border in Firefox 4+ */
+.web_modules-Button-index--button--1DI5I::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.web_modules-Button-index--button--1DI5I {
+  cursor: pointer;
+  padding: 0 16px;
+  padding: 0 1rem;
+  line-height: 40px;
+  line-height: 2.5rem;
+  min-width: 48px;
+  min-width: 3rem;
+
+  text-align: center;
+
+  font-weight: 100;
+  color: #fff;
+  background: linear-gradient(160deg, #006bf6, #10e951);
+
+  /*
+    border-image does not allow border-radius...
+  border: 2px solid;
+  border-image: linear-gradient(160deg, #006bf6, #10e951) 1 1;
+  */
+
+  /*
+    gradient "border-image" clone
+    pseudo placed below the button itself
+  */
+  position: relative; /* pseudo element is absolutely relative to its parent */
+
+  /*
+    We cannot use the same radius value because it's not what you
+    expect. We need to use the radius - the border witdth
+  */
+  border-radius: 1px;
+}
+
+.web_modules-Button-index--button--1DI5I:hover {
+  color: #08b09b;
+  background: #fff;
+}
+
+.web_modules-Button-index--button--1DI5I::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: linear-gradient(160deg, #006bf6, #10e951);
+  border-radius: 3px;
+}
+
+.web_modules-Button-index--huge--9pocv {
+  font-size: 32px;
+  font-size: 2rem;
+  padding: 0 32px;
+  padding: 0 2rem;
+  line-height: 80px;
+  line-height: 5rem;
+}
