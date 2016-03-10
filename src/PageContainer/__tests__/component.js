@@ -2,8 +2,6 @@ import test from "ava"
 
 import React from "react"
 import { createRenderer } from "react-addons-test-utils"
-// can't use jsx
-// https://github.com/sindresorhus/ava/issues/458
 const jsx = React.createElement
 import jsxify from "react-element-to-jsx-string"
 
@@ -12,9 +10,9 @@ import PageContainer from "../component"
 // fixtures
 /* eslint-disable react/no-multi-comp */
 const noop = () => {}
-const Page = () => jsx("div", { className: "Page" })
-const PageError = () => jsx("div", { className: "PageError" })
-const AnotherPage = () => jsx("div", { className: "AnotherPage" })
+const Page = () => <div className="Page" />
+const PageError = () => <div className="PageError" />
+const AnotherPage = () => <div className="AnotherPage" />
 
 test("should render a Page if page is ok", (t) => {
   const renderer = createRenderer()

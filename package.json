@@ -207,6 +207,7 @@
     "verbose": true,
     "require": [
       "babel-core/register"
-    ]
+    ],
+    "babel": "inherit"
   }
 }
