@@ -113,6 +113,10 @@ export default class PageContainer extends Component {
           ),
           "/"
         )
+        .replace(
+          window.location.hash,
+          ""
+        )
       if (currentExactPageUrl !== item.__url) {
         console.log(
           `statinamic: PageContainer: ` +
