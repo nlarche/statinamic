@@ -1,4 +1,5 @@
 import test from "ava"
+import sinon from "sinon"
 
 import React from "react"
 import { createRenderer } from "react-addons-test-utils"
@@ -182,5 +183,67 @@ test("should render a another page layout if defaultLayout is used", (t) => {
     `<div>\n` +
     `  <AnotherPage ref={function noRefCheck() {}} />\n` +
     `</div>`
+  )
+})
+
+test("should log error if default layout doesn't exits", (t) => {
+  console.error = sinon.spy()
+
+  const renderer = createRenderer()
+  renderer.render(
+    jsx(
+      PageContainer,
+      {
+        params: { splat: "" },
+        pages: { "/": {} },
+        defaultLayout: "AnotherPage",
+      }
+    ),
+    {
+      layouts: { Page },
+      collection: [],
+    },
+  )
+
+  console.error.firstCall.calledWithMatch(
+    /default layout \"AnotherPage\" doesn\'t exist./
+  )
+})
+
+test.only("should log if redirection needed", (t) => {
+  console.info = sinon.spy()
+
+  process.env.STATINAMIC_PATHNAME = ""
+  global.window = {
+    location: {
+      href: "http://foo/statinamic",
+      host: "foo",
+      procotol: "http:",
+      hash: "",
+    },
+  }
+  const renderer = createRenderer()
+  renderer.render(
+    jsx(
+      PageContainer,
+      {
+        params: { splat: "foo/" },
+        pages: { "/foo/": {} },
+        getPage: noop,
+        setPageNotFound: noop,
+        defaultLayout: "Page",
+      }
+    ),
+    {
+      layouts: { Page },
+      collection: [{
+        __url: "/foo/",
+      }],
+    },
+  )
+  t.true(console.info.calledOnce)
+  console.info.calledWithMatch(
+    // replacing by '/foo' to '/foo/'
+    /replacing by \'\/foo\' to \'\/foo\/\'/
   )
 })

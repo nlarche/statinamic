@@ -100,8 +100,10 @@ export default class PageContainer extends Component {
     }
 
     const item = find(context.collection, pageUrl)
-
+    console.log(isClient)
+    console.log(typeof window !== "undefined")
     if (isClient && item) {
+      console.log("condition passed")
       // adjust url (eg: missing trailing slash)
       const currentExactPageUrl = window.location.href
         .replace(
@@ -118,7 +120,7 @@ export default class PageContainer extends Component {
           ""
         )
       if (currentExactPageUrl !== item.__url) {
-        console.log(
+        console.info(
           `statinamic: PageContainer: ` +
           `replacing by '${ currentExactPageUrl }' to '${ item.__url }'`
         )
